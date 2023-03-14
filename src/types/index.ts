@@ -16,20 +16,25 @@ type ProjectCardProps = {
   stacks: devInfo[];
   links: Array<{
     link: string;
-    color: string;
+    colorScheme: string;
     text: string;
   }>;
 };
 
-type BioType = {
-  name: string;
+type PrivateData = {
   pn: ObfuscatedDat;
   ea: ObfuscatedDat;
+};
+
+type BioType = {
+  name: string;
+  bioGreeting: string;
   bioText: string;
 };
 
 export type {
   devInfo,
+  PrivateData,
   StackType,
   ObfuscatedDat,
   Dat,
