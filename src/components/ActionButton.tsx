@@ -17,6 +17,7 @@ const ActionButton: React.FC<Props> = ({ content, onClick, IconComp }) => {
       overflow="clip"
       p="1"
       onClick={onClick}
+      userSelect={"text"}
     >
       <Icon color={"white"} mx={"2"} as={IconComp} />
       <Text
@@ -25,6 +26,7 @@ const ActionButton: React.FC<Props> = ({ content, onClick, IconComp }) => {
         borderRadius={"inherit"}
         backgroundColor={"white"}
         px={"2"}
+        width={"full"}
       >
         {content}
       </Text>

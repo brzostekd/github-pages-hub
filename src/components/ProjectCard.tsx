@@ -14,6 +14,7 @@ import {
   UnorderedList,
   Box,
   CardHeader,
+  Link,
 } from "@chakra-ui/react";
 import React from "react";
 import { ProjectCardProps } from "../types";
@@ -29,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const ImgElement = (
     <Image
       //   shadow={"2xl"}
-      filter={"blur(2px)"}
+      filter={{ base: "blur(1px)", md: "blur(2px)" }}
       objectFit="cover"
       maxW={{ base: "100%", xl: "500px" }}
       maxH={{ base: "500px", xl: "100%" }}
@@ -81,14 +82,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </Stack>
 
           <Stack direction={{ base: "column", sm: "row" }} padding={8}>
-            {links.map(({ link, color, text }) => (
+            {links.map(({ link, colorScheme, text }) => (
               <Button
+                as={Link}
+                href={link}
+                key={link + text.slice(0, 10)}
                 variant="outline"
-                colorScheme={color}
+                colorScheme={colorScheme}
                 width={"full"}
-                onClick={() => {
-                  window.location.href = link;
-                }}
+                // }}
               >
                 {text}
               </Button>
