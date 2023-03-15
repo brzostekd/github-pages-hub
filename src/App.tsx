@@ -33,18 +33,18 @@ function App() {
           <Heading size={"2xl"} wordBreak={"break-word"} textAlign={"center"}>
             {Bio.name}
           </Heading>
-          <Stack direction={{ base: "column", sm: "row" }} spacing={"6"}>
+          <Stack direction={{ base: "column", md: "row" }} spacing={"6"}>
             <ActionButton
               content={"+48 " + privateData.pn}
               onClick={function () {
-                window.open("tel:" + privateData.pn);
+                window.open("tel:" + privateData.pn.replaceAll(" ", ""));
               }}
               IconComp={PhoneIcon}
             ></ActionButton>
             <ActionButton
               content={privateData.ea}
               onClick={function () {
-                window.open("mailto:" + "Bio.ea");
+                window.open("mailto:" + privateData.ea);
               }}
               IconComp={EmailIcon}
             ></ActionButton>
