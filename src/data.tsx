@@ -13,14 +13,13 @@ const Bio: BioType = {
   Jako programista, jestem bardzo skrupulatny i dbam o szczegóły, szczególnie jeśli chodzi o tworzenie kodu i dokumentacji. Jestem zawsze otwarty na nowe wyzwania i szybko uczę się nowych technologii, co pozwoliło mi szybko tworzyć moje projekty.`,
 };
 
-const ProjectsData: ProjectCardProps[] = [
+const ProjectsData: Omit<ProjectCardProps, "placeImgFirst">[] = [
   {
     imgSrc: s2,
     cardTitle: "Template Hero",
     about: `        Template Hero to aplikacja webowa pozwalająca użytkownikom na tworzenie szablonów dokumentów przy użyciu języka Jinja i wypełnianie ich danymi. Frontend został napisany z wykorzystaniem Reacta, Chakra UI i Axios.
     
   Użytkownik może tworzyć i edytować szablony w panelu template, a po wypełnieniu formularza, dane są wysyłane do serwera i wykorzystywane do wypełnienia szablonu. Projekt oferuje wiele funkcjonalności i obsługuje błędy.`,
-    placeImgFirst: false,
     stacks: [
       {
         stackType: "Frontend" as const,
@@ -53,8 +52,7 @@ const ProjectsData: ProjectCardProps[] = [
     cardTitle: "Future Perfect",
     about: `        Future Perfect to aplikacja internetowa, pozwalająca na zarządzanie czasem i osiąganie celów z wykorzystaniem techniki pomodoro. Użytkownicy tworzą cele i zadania, a następnie zaznaczają ich postęp, wykorzystując minutnik pomodoro. Aplikacja umożliwia także ustawianie priorytetów i śledzenie postępu w osiąganiu celów.
 
-    Projekt został napisany w TypeScript, React oraz ChakraUI, a komunikacja między frontendem a backendem odbywa się poprzez API napisane w Pythonie z użyciem FastAPI. Future Perfect wykorzystuje context, state oraz reducery i jest idealnym narzędziem dla osób, które chcą efektywnie zarządzać swoim czasem i osiągać cele.`,
-    placeImgFirst: false,
+    Projekt został napisany w TypeScript, React oraz ChakraUI. Future Perfect wykorzystuje context, state oraz reducery i jest idealnym narzędziem dla osób, które chcą efektywnie zarządzać swoim czasem i osiągać cele.`,
     stacks: [
       {
         stackType: "Frontend" as const,

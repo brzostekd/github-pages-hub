@@ -6,6 +6,7 @@ import {
   VStack,
   Center,
   Flex,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { Divider } from "@chakra-ui/react";
 import ProjectCard from "./components/ProjectCard";
@@ -21,6 +22,7 @@ function App() {
     pn: "777 666 555",
     ea: "my.email.default@default.com",
   });
+  const placeImgFirst = useBreakpointValue<boolean>({ base: true, xl: false });
   useEffect(() => {
     (async () => {
       setPrivateData(await getPrivateData());
@@ -37,7 +39,7 @@ function App() {
             <ActionButton
               content={"+48 " + privateData.pn}
               onClick={function () {
-                window.open("tel:" + privateData.pn.replaceAll(" ", ""));
+                window.open("tel:+48" + privateData.pn.replaceAll(" ", ""));
               }}
               IconComp={PhoneIcon}
             ></ActionButton>
@@ -82,7 +84,11 @@ function App() {
             width={"100vw"}
           ></Divider>
           {ProjectsData.map((project) => (
-            <ProjectCard key={project.cardTitle} {...project} />
+            <ProjectCard
+              placeImgFirst={placeImgFirst ?? false}
+              key={project.cardTitle}
+              {...project}
+            />
           ))}
         </VStack>
       </Center>
