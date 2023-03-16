@@ -10,14 +10,14 @@ const BioPL: BioType = {
                     
           Pomimo braku doświadczenia zawodowego, stworzyłem już dwie aplikacje internetowe, które zostały opisane poniżej. Korzystałem z nowych struktur funkcjonalnych, contextów, stanów i reducerów, aby zapewnić wydajność i funkcjonalność dla użytkowników.
 
-          Jako programista, jestem bardzo skrupulatny i dbam o szczegóły, szczególnie jeśli chodzi o tworzenie kodu i dokumentacji. Jestem zawsze otwarty na nowe wyzwania i szybko uczę się nowych technologii, co pozwoliło mi szybko tworzyć moje projekty.`,
+          Jako programista, jestem bardzo skrupulatny i dbam o szczegóły, szczególnie jeśli chodzi o tworzenie kodu i dokumentacji. Jestem zawsze otwarty na nowe wyzwania i szybko uczę się nowych technologii, co pozwoliło mi stworzyć poniższe projekty w krótkim czasie.`,
 };
 
 const ProjectsDataPL: Omit<ProjectCardProps, "placeImgFirst">[] = [
   {
     imgSrc: s2,
     cardTitle: "Template Hero",
-    about: `        Template Hero to aplikacja webowa pozwalająca użytkownikom na tworzenie szablonów dokumentów przy użyciu języka Jinja i wypełnianie ich danymi. Frontend został napisany z wykorzystaniem Reacta, Chakra UI i Axios.
+    about: `        Template Hero to aplikacja webowa pozwalająca użytkownikom na tworzenie szablonów dokumentów przy użyciu języka Jinja2 i wypełnianie ich danymi. Frontend został napisany z wykorzystaniem Reacta, Chakra UI i Axios.
     
           Użytkownik może tworzyć i edytować szablony w panelu template, a po wypełnieniu formularza, dane są wysyłane do serwera i wykorzystywane do wypełnienia szablonu. Projekt oferuje wiele funkcjonalności i obsługuje błędy.`,
     stacks: [
@@ -29,8 +29,8 @@ const ProjectsDataPL: Omit<ProjectCardProps, "placeImgFirst">[] = [
       },
       {
         stackType: "Backend" as const,
-        about: `Projekt wykorzystuje fastapi jako framework webowy do tworzenia API, a także jinja i jinja2schema do generowania szablonów dokumentów i opisów danych w formacie JSON.`,
-        technology: ["Python", "FastAPI", "Jinija2", "Jinja2Schema"],
+        about: `Projekt wykorzystuje fastapi jako framework webowy do tworzenia API, a także Jinja2 i Jinja2schema do generowania szablonów dokumentów i opisów danych w formacie JSON Schema.`,
+        technology: ["Python", "FastAPI", "Jinja2", "Jinja2Schema"],
       },
     ],
     links: [
@@ -86,14 +86,14 @@ const BioEN: BioType = {
                     
           Despite my lack of professional experience, I have already developed two web applications, which are described below. I have used new functional structures, contexts, states and reducers to provide performance and functionality for users.
 
-          As a programmer, I am very meticulous and pay attention to detail, especially when it comes to creating code and documentation. I am always open to new challenges and learn new technologies quickly, which has allowed me to create my projects quickly.`,
+          As a programmer, I am very meticulous and pay attention to detail, especially when it comes to creating code and documentation. I am always open to new challenges and learn new technologies quickly, which has allowed me to create my projects in a short period of time.`,
 };
 
 const ProjectsDataEN: Omit<ProjectCardProps, "placeImgFirst">[] = [
   {
     imgSrc: s2,
     cardTitle: "Template Hero",
-    about: `          Template Hero is a web application that allows users to create document templates using the Jinja language and fill them with data. The frontend was written using React, Chakra UI and Axios.
+    about: `          Template Hero is a web application that allows users to create document templates using the Jinja2 language and fill them with data. The frontend was written using React, Chakra UI and Axios.
     
           Users can create and edit templates in the template panel, and after filling out a form, the data is sent to the server and used to populate the template. The project offers a lot of functionality and supports errors.`,
     stacks: [
@@ -105,7 +105,7 @@ const ProjectsDataEN: Omit<ProjectCardProps, "placeImgFirst">[] = [
       },
       {
         stackType: "Backend" as const,
-        about: `The project uses fastapi as a web framework to create APIs, and jinja and jinja2schema to generate document templates and data descriptions in JSON format`,
+        about: `The project uses fastapi as a web framework to create APIs, and Jinja2 and Jinja2schema to generate document templates and data descriptions in JSON format`,
         technology: ["Python", "FastAPI", "Jinja2", "Jinja2Schema"],
       },
     ],
