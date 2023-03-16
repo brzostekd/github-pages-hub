@@ -7,12 +7,15 @@ import {
   Center,
   Flex,
   useBreakpointValue,
+  Switch,
+  Box,
+  HStack,
 } from "@chakra-ui/react";
 import { Divider } from "@chakra-ui/react";
 import ProjectCard from "./components/ProjectCard";
 import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
 import ActionButton from "./components/ActionButton";
-import { ProjectsData, Bio } from "./Data";
+import { BioPL, BioEN, ProjectsDataPL, ProjectsDataEN } from "./Data";
 import { PrivateData } from "./types";
 import { useEffect, useState } from "react";
 import getPrivateData from "./Api";
@@ -23,6 +26,15 @@ function App() {
     ea: "my.email.default@default.com",
   });
   const placeImgFirst = useBreakpointValue<boolean>({ base: true, xl: false });
+  // Calling toLowerCase on the "language" property in order to achive
+  // compatibility with Safari on iOS prior to 10.2, as per the note on
+  // https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language
+  const isOSLanguagePolish = window.navigator.language.toLowerCase() == "pl-PL";
+  const [isLanguagePolish, setIsLanguagePolish] =
+    useState<boolean>(isOSLanguagePolish);
+  const Bio = isLanguagePolish ? BioPL : BioEN;
+  const ProjectsData = isLanguagePolish ? ProjectsDataPL : ProjectsDataEN;
+
   useEffect(() => {
     (async () => {
       setPrivateData(await getPrivateData());
@@ -68,6 +80,19 @@ function App() {
             py="8"
             px={{ base: "4", sm: "14" }}
           >
+            <HStack right={"4"} top={"4"} position={"absolute"}>
+              <Text>
+                {isLanguagePolish
+                  ? "Switch to English"
+                  : "Zmień na język polski"}
+              </Text>
+              <Switch
+                isChecked={isLanguagePolish}
+                onChange={() => setIsLanguagePolish(!isLanguagePolish)}
+                colorScheme="teal"
+                size="lg"
+              />
+            </HStack>
             <Text fontSize={"2xl"} whiteSpace="pre-wrap" pb={2}>
               <b>{Bio.bioGreeting}</b>
             </Text>

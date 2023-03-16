@@ -3,7 +3,7 @@ import s1 from "./images/s1.png";
 import s2 from "./images/s2.png";
 import { BioType, PrivateData, ProjectCardProps } from "./types";
 
-const Bio: BioType = {
+const BioPL: BioType = {
   name: "Daniel Brzostek",
   bioGreeting: "Witaj!",
   bioText: `          Jestem programistą, szukającym pierwszej pracy jako junior w IT. Jestem bardzo zmotywowany, by rozwijać swoje umiejętności i zdobywać doświadczenie w pracy z technologiami frontendowymi i backendowymi.
@@ -13,7 +13,7 @@ const Bio: BioType = {
           Jako programista, jestem bardzo skrupulatny i dbam o szczegóły, szczególnie jeśli chodzi o tworzenie kodu i dokumentacji. Jestem zawsze otwarty na nowe wyzwania i szybko uczę się nowych technologii, co pozwoliło mi szybko tworzyć moje projekty.`,
 };
 
-const ProjectsData: Omit<ProjectCardProps, "placeImgFirst">[] = [
+const ProjectsDataPL: Omit<ProjectCardProps, "placeImgFirst">[] = [
   {
     imgSrc: s2,
     cardTitle: "Template Hero",
@@ -79,5 +79,81 @@ const ProjectsData: Omit<ProjectCardProps, "placeImgFirst">[] = [
     ],
   },
 ];
+const BioEN: BioType = {
+  name: "Daniel Brzostek",
+  bioGreeting: "Hello!",
+  bioText: `          I am a software developer looking for my first job as a junior in IT. I am highly motivated to develop my skills and gain experience working with frontend and backend technologies.
+                    
+          Despite my lack of professional experience, I have already developed two web applications, which are described below. I have used new functional structures, contexts, states and reducers to provide performance and functionality for users.
 
-export { Bio, ProjectsData };
+          As a programmer, I am very meticulous and pay attention to detail, especially when it comes to creating code and documentation. I am always open to new challenges and learn new technologies quickly, which has allowed me to create my projects quickly.`,
+};
+
+const ProjectsDataEN: Omit<ProjectCardProps, "placeImgFirst">[] = [
+  {
+    imgSrc: s2,
+    cardTitle: "Template Hero",
+    about: `          Template Hero is a web application that allows users to create document templates using the Jinja language and fill them with data. The frontend was written using React, Chakra UI and Axios.
+    
+          Users can create and edit templates in the template panel, and after filling out a form, the data is sent to the server and used to populate the template. The project offers a lot of functionality and supports errors.`,
+    stacks: [
+      {
+        stackType: "Frontend" as const,
+        about:
+          "On the front-end, I used React, Chakra UI and the Axios library to handle HTTP requests.",
+        technology: ["TypeScript", "React", "Chakra UI", "Formik", "Axios"],
+      },
+      {
+        stackType: "Backend" as const,
+        about: `The project uses fastapi as a web framework to create APIs, and jinja and jinja2schema to generate document templates and data descriptions in JSON format`,
+        technology: ["Python", "FastAPI", "Jinja2", "Jinja2Schema"],
+      },
+    ],
+    links: [
+      {
+        link: "https://brzostekd.github.io/Template-Hero/index.html",
+        colorScheme: "green",
+        text: "View project online",
+      },
+      {
+        link: "https://github.com/brzostekd/Template-Hero",
+        colorScheme: "blue",
+        text: "See on GitHub",
+      },
+    ],
+  },
+
+  {
+    imgSrc: s1,
+    cardTitle: "Future Perfect",
+    about: `          Future Perfect is a web application that allows users to manage time and achieve goals using the pomodoro technique. Users create goals and tasks and then mark their progress using a pomodoro timer. The application also allows users to set priorities and track their progress toward goals.
+
+          The project was written in TypeScript, React and ChakraUI. Future Perfect uses context, state and reducers and is an ideal tool for people who want to effectively manage their time and achieve goals.`,
+    stacks: [
+      {
+        stackType: "Frontend" as const,
+        technology: [
+          "TypeScript",
+          "React",
+          "Chakra UI",
+          "Formik (for creating dynamic forms)",
+          "Local Storage (for client-side data storage).",
+        ],
+      },
+    ],
+    links: [
+      {
+        link: "https://brzostekd.github.io/Future-Perfect/index.html",
+        colorScheme: "green",
+        text: "View project online",
+      },
+      {
+        link: "https://github.com/brzostekd/Future-Perfect",
+        colorScheme: "blue",
+        text: "See on GitHub",
+      },
+    ],
+  },
+];
+
+export { BioPL, BioEN, ProjectsDataPL, ProjectsDataEN };
