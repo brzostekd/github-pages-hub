@@ -1,5 +1,4 @@
-import { EmailIcon } from "@chakra-ui/icons";
-import { As, Box, Button, Flex, HStack, Icon, Text } from "@chakra-ui/react";
+import { As, Button, Icon, Text } from "@chakra-ui/react";
 import React from "react";
 type Props = {
   content: string;

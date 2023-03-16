@@ -1,19 +1,14 @@
 import {
   Card,
   Stack,
-  CardBody,
   Heading,
-  CardFooter,
   Button,
   Image,
   Text,
-  HStack,
   VStack,
-  List,
   ListItem,
   UnorderedList,
   Box,
-  CardHeader,
   Link,
 } from "@chakra-ui/react";
 import React from "react";

@@ -8,7 +8,6 @@ import {
   Flex,
   useBreakpointValue,
   Switch,
-  Box,
   HStack,
 } from "@chakra-ui/react";
 import { Divider } from "@chakra-ui/react";

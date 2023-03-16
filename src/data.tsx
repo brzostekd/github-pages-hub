@@ -1,7 +1,6 @@
-import getData from "./Api";
 import s1 from "./images/s1.png";
 import s2 from "./images/s2.png";
-import { BioType, PrivateData, ProjectCardProps } from "./types";
+import { BioType, ProjectCardProps } from "./types";
 
 const BioPL: BioType = {
   name: "Daniel Brzostek",
