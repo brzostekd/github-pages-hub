@@ -29,7 +29,7 @@ const ProjectsDataPL: Omit<ProjectCardProps, "placeImgFirst">[] = [
       },
       {
         stackType: "Backend" as const,
-        about: `Projekt wykorzystuje fastapi jako framework webowy do tworzenia API, a także Jinja2 i Jinja2schema do generowania szablonów dokumentów i opisów danych w formacie JSON Schema.`,
+        about: `Projekt wykorzystuje fastapi jako framework webowy do tworzenia API, a także Jinja2 i Jinja2schema do tworzenia szablonów dokumentów i generowania opisów danych w formacie JSON Schema.`,
         technology: ["Python", "FastAPI", "Jinja2", "Jinja2Schema"],
       },
     ],
@@ -105,7 +105,7 @@ const ProjectsDataEN: Omit<ProjectCardProps, "placeImgFirst">[] = [
       },
       {
         stackType: "Backend" as const,
-        about: `The project uses fastapi as a web framework to create APIs, and Jinja2 and Jinja2schema to generate document templates and data descriptions in JSON format`,
+        about: `The project uses fastapi as a web framework to create APIs, as well as Jinja2 and Jinja2schema to create document templates and generate JSON Schema data descriptions`,
         technology: ["Python", "FastAPI", "Jinja2", "Jinja2Schema"],
       },
     ],
