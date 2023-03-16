@@ -7,10 +7,10 @@ const Bio: BioType = {
   name: "Daniel Brzostek",
   bioGreeting: "Witaj!",
   bioText: `          Jestem programistą, szukającym pierwszej pracy jako junior w IT. Jestem bardzo zmotywowany, by rozwijać swoje umiejętności i zdobywać doświadczenie w pracy z technologiami frontendowymi i backendowymi.
+                    
+          Pomimo braku doświadczenia zawodowego, stworzyłem już dwie aplikacje internetowe, które zostały opisane poniżej. Korzystałem z nowych struktur funkcjonalnych, contextów, stanów i reducerów, aby zapewnić wydajność i funkcjonalność dla użytkowników.
 
-  Pomimo braku doświadczenia zawodowego, stworzyłem już dwie aplikacje internetowe, które zostały opisane poniżej. Korzystałem z nowych struktur funkcjonalnych, contextów, stanów i reducerów, aby zapewnić wydajność i funkcjonalność dla użytkowników.
-
-  Jako programista, jestem bardzo skrupulatny i dbam o szczegóły, szczególnie jeśli chodzi o tworzenie kodu i dokumentacji. Jestem zawsze otwarty na nowe wyzwania i szybko uczę się nowych technologii, co pozwoliło mi szybko tworzyć moje projekty.`,
+          Jako programista, jestem bardzo skrupulatny i dbam o szczegóły, szczególnie jeśli chodzi o tworzenie kodu i dokumentacji. Jestem zawsze otwarty na nowe wyzwania i szybko uczę się nowych technologii, co pozwoliło mi szybko tworzyć moje projekty.`,
 };
 
 const ProjectsData: Omit<ProjectCardProps, "placeImgFirst">[] = [
@@ -19,7 +19,7 @@ const ProjectsData: Omit<ProjectCardProps, "placeImgFirst">[] = [
     cardTitle: "Template Hero",
     about: `        Template Hero to aplikacja webowa pozwalająca użytkownikom na tworzenie szablonów dokumentów przy użyciu języka Jinja i wypełnianie ich danymi. Frontend został napisany z wykorzystaniem Reacta, Chakra UI i Axios.
     
-  Użytkownik może tworzyć i edytować szablony w panelu template, a po wypełnieniu formularza, dane są wysyłane do serwera i wykorzystywane do wypełnienia szablonu. Projekt oferuje wiele funkcjonalności i obsługuje błędy.`,
+          Użytkownik może tworzyć i edytować szablony w panelu template, a po wypełnieniu formularza, dane są wysyłane do serwera i wykorzystywane do wypełnienia szablonu. Projekt oferuje wiele funkcjonalności i obsługuje błędy.`,
     stacks: [
       {
         stackType: "Frontend" as const,
@@ -50,9 +50,9 @@ const ProjectsData: Omit<ProjectCardProps, "placeImgFirst">[] = [
   {
     imgSrc: s1,
     cardTitle: "Future Perfect",
-    about: `        Future Perfect to aplikacja internetowa, pozwalająca na zarządzanie czasem i osiąganie celów z wykorzystaniem techniki pomodoro. Użytkownicy tworzą cele i zadania, a następnie zaznaczają ich postęp, wykorzystując minutnik pomodoro. Aplikacja umożliwia także ustawianie priorytetów i śledzenie postępu w osiąganiu celów.
+    about: `          Future Perfect to aplikacja internetowa, pozwalająca na zarządzanie czasem i osiąganie celów z wykorzystaniem techniki pomodoro. Użytkownicy tworzą cele i zadania, a następnie zaznaczają ich postęp, wykorzystując minutnik pomodoro. Aplikacja umożliwia także ustawianie priorytetów i śledzenie postępu w osiąganiu celów.
 
-    Projekt został napisany w TypeScript, React oraz ChakraUI. Future Perfect wykorzystuje context, state oraz reducery i jest idealnym narzędziem dla osób, które chcą efektywnie zarządzać swoim czasem i osiągać cele.`,
+          Projekt został napisany w TypeScript, React oraz ChakraUI. Future Perfect wykorzystuje context, state oraz reducery i jest idealnym narzędziem dla osób, które chcą efektywnie zarządzać swoim czasem i osiągać cele.`,
     stacks: [
       {
         stackType: "Frontend" as const,
