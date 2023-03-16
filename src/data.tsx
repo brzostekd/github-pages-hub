@@ -1,5 +1,5 @@
 import s1 from "./images/s1.png";
-import s2 from "./images/s2.png";
+import s2 from "./images/s2.jpg";
 import { BioType, ProjectCardProps } from "./types";
 
 const BioPL: BioType = {

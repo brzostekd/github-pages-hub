@@ -24,8 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const ImgElement = (
     <Image
-      //   shadow={"2xl"}
-      filter={"blur(1px)"}
+      filter={"blur(0.75px)"}
       objectFit="cover"
       maxW={{ base: "100%", xl: "500px" }}
       maxH={{ base: "500px", xl: "100%" }}
