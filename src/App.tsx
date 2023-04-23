@@ -28,7 +28,8 @@ function App() {
   // Calling toLowerCase on the "language" property in order to achive
   // compatibility with Safari on iOS prior to 10.2, as per the note on
   // https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language
-  const isOSLanguagePolish = window.navigator.language.toLowerCase() == "pl-PL";
+  const isOSLanguagePolish =
+    window.navigator.language.toLowerCase() === "pl-PL";
   const [isLanguagePolish, setIsLanguagePolish] =
     useState<boolean>(isOSLanguagePolish);
   const Bio = isLanguagePolish ? BioPL : BioEN;
@@ -41,12 +42,16 @@ function App() {
   }, []);
   return (
     <Flex direction={"column"} pb="12">
-      <Center shadow={2} padding={"6"} backgroundColor="white">
-        <VStack spacing={"6"}>
+      <Center shadow={2} paddingY={"6"} backgroundColor="white">
+        <VStack spacing={"6"} width="full">
           <Heading size={"2xl"} wordBreak={"break-word"} textAlign={"center"}>
             {Bio.name}
           </Heading>
-          <Stack direction={{ base: "column", md: "row" }} spacing={"6"}>
+          <Stack
+            direction={{ base: "column", md: "row" }}
+            width={{ base: "full", sm: "auto" }}
+            spacing={{ base: "2", sm: "5", md: "6" }}
+          >
             <ActionButton
               content={"+48 " + privateData.pn}
               onClick={function () {
