@@ -77,7 +77,7 @@ function App() {
           <Card
             direction={"column"}
             variant={{ base: "outline", md: "filled" }}
-            borderRadius={{ base: 0, md: "2xl" }}
+            borderRadius={{ base: "none", md: "2xl" }}
             backgroundColor={"white"}
             overflow={"clip"}
             width={"full"}
