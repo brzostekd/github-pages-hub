@@ -84,7 +84,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 variant="outline"
                 colorScheme={colorScheme}
                 width={"full"}
-                // }}
               >
                 {text}
               </Button>
