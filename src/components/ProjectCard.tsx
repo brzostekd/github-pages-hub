@@ -81,6 +81,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 href={link}
                 key={link + text.slice(0, 10)}
                 variant="outline"
+                _hover={{ textDecoration: "none" }}
                 colorScheme={colorScheme}
                 width={"full"}
               >
